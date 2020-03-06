@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome to my world</title>
+</head>
+<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+<!-- 引入JQuery -->
+<script src="static/js/jquery.min.js"></script>
+<!-- 鼠标点击特效 -->
+<script src="static/js/click-fun.js"></script>
+
+
+<body onclick="click_fun(event)">
+    <nav>
+        <div class="header-fixed">
+            <div class="nav-logo fleft"><span style="line-height: 60px;">为你筑梦</span></div>
+            <div class="nav-menubar fright">
+                <ul id="nav-list">
+                    <li class="current"><a href="#">首页</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">时光轴</a></li>
+                    <li><a href="#">留言板</a></li>
+                    <li><a href="#">友人帐</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="part_1">
+        <div class="part_1_title">
+            <div class="inner">
+                <h2>为你筑梦</h2>
+            </div>
+            <div class="title">
+                <p>心之所向，素履可往</p>
+                <p>生如逆旅，一苇以航</p>
+            </div>
+        </div>
+        <div class="guide">
+            <a href="javascript:void(0);">
+                <span class="down">
+                    <!-- svg矢量图 -->
+                    <svg viewBox="0 0 1792 1024" width="16" height="16">
+                        <path d="M21.824 126.208L834.624 998.656a92.672 92.672 0 0 0 126.976 0L1770.304 126.208C1819.2 77.568 1780.544 0 1706.816 0H85.312C11.84 0-27.328 77.312 21.824 126.208z" fill="#ffffff" p-id="3369"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="part_2">
+        <div class="container">
+            <div class="brief_major">
+                — 欢迎走进我的世界 —
+            </div>
+            <div class="brief_paragraph">
+                <p>对于曾经，每个人的记忆中，都会有一些无法忘记的片段。</p>
+                <p>曾经的年少轻狂，给我们的青春留下了太多美好的回忆，但也有些许无奈，让我们久久难以释怀。</p>
+                <p>那时的自己，真的很单纯，也真的很勇敢。或许这就是青春原本的样子，不完美，却很真实</p>
+                <p>但无论怎样，过去了的，都无法再重来，我们只能往前走，只能向前看。</p>
+            </div>
+            <div class="brief_url">
+                <a href="javascript:void(0);">About me</a>
+            </div>
+        </div>
+    </div>
+    <div class="part_3">
+            <div class="container">
+                <div class="brief_major">
+                    — 自娱自乐 —
+                </div>
+                <div class="list">
+                    <ul>
+                        <li>
+                            <figcaption>
+                                <figcaption>迷你商城</figcaption>
+                                <img src="static/images/" width="100%" height="220" />
+                            </figcaption>
+                        </li>
+                        <li>
+                            <figcaption>
+                                <figcaption>权限系统</figcaption>
+                                <img src="static/images/" width="100%" height="220" />
+                            </figcaption>
+                        </li>
+                        <li>
+                            <figcaption>
+                                <figcaption>云音乐</figcaption>
+                                <img src="static/images/" width="100%" height="220" />
+                            </figcaption>
+                        </li>
+                        <li>
+                            <figcaption>
+                                <figcaption><a href="static/files/snake-ai.exe">贪吃蛇AI</a></figcaption>
+                                <img src="static/images/snake-ai.png" width="100%" height="220" />
+                            </figcaption>
+                        </li>
+                        <li>
+                            <figcaption>
+                                <figcaption><a href="static/files/pintu.html">拼图游戏</a></figcaption>
+                                <img src="static/images/pintu.png" width="100%" height="220" />
+                            </figcaption>
+                        </li>
+                        <li>
+                            <figcaption>
+                                <figcaption><a href="static/files/3d-rate.html">旋转星球</a></figcaption>
+                                <img src="static/images/3d-rate.png" width="100%" height="220" />
+                            </figcaption>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="more"></div>
+            <div class="copyright">Copyright © 2019-2020 为你筑梦</div>
+        </div>
+    </footer>
+
+    <!-- 背景雪花特效 -->
+    <script src="static/js/snowflakes.min.js"></script>
+    <script src="static/js/snow_load.js"></script>
+    <!-- index.js -->
+    <script>
+        // 原生js写法
+        window.onload = function(){
+            // 设置点击nav-list的样式
+            let navUl = document.getElementById("nav-list");
+            let navLi = navUl.getElementsByTagName("li");
+            for(let index = 0; index < navLi.length; index++){
+                navLi[index].onclick = function(){
+                    for(let i = 0; i < navLi.length; i++){
+                        navLi[i].className = "";
+                    }
+                    this.className = "current";
+                };
+            }
+        }
+    </script>
+</body>
+</html>

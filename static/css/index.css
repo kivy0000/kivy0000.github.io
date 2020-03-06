@@ -1,0 +1,264 @@
+/* 清除默认样式 */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+li a:link,
+li a:hover,
+li a:active,
+li a:visited{
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* 宽度 */
+.container{
+    width: 1190px;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 水平居中 */
+.center{
+    margin: 0 auto;
+}
+
+.fleft{
+    float: left;
+}
+
+.fright{
+    float: right;
+}
+
+/* 导航样式 */
+nav{
+    position: fixed;
+    width: 100%;
+    left:0;
+    top: 0;
+    min-height: 60px;
+    background-color: rgba(0,0,0,.6);
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    z-index: 100;
+}
+
+nav ul li{
+    float: left;
+    display: block;
+    margin: 10px 5px;
+    position: relative;
+}
+
+nav ul li a{
+    color: #fff;
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 32px;
+    padding: 4px 28px;
+    cursor: pointer;
+}
+
+.header-fixed{
+    width: 1190px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 导航菜单的效果渲染 */
+nav li::after{
+    position: absolute;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: #6bc30d;
+    content: "";
+    transition: all .6s;
+}
+
+nav .current::after {
+    width: 100%;
+}
+
+nav .current a {
+    color: #6bc30d;
+}
+
+
+nav li:hover a{
+    color: #6bc30d;
+}
+
+nav li:hover::after{
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 2px;
+    background-color: #6bc30d;
+    content: "";
+    transition: all .6s;
+}
+
+
+
+/* 内容样式 */
+.part_1{
+    width: 100%;
+    height: 722px;
+    background: url('../images/bg01.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    text-align: center;
+}
+
+/* 第一部分摘要 */
+.part_1 .part_1_title{
+    width: 200px;
+    position: absolute;
+    left:50%;
+    top:35%;
+    margin-left: -100px;
+    color: #fff;
+}
+
+.part_1 .part_1_title .inner{
+    margin-bottom: 20px;
+}
+
+.part_1 .part_1_title .inner h2{
+    font-size: 24px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.part_1 .part_1_title .inner:before{
+    display: block;
+    height: 2px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+}
+
+.part_1 .part_1_title .inner:after{
+    display: block;
+    height: 2px;
+    width: 100%;
+    content: '';
+    position: absolute;
+    background-color: #fff;
+}
+
+.part_1 .part_1_title .title{
+    font-size: 20px;
+}
+
+/* 第一部分指引 */
+.part_1 .guide{
+    width: 100%;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+.part_1 .guide a:link,
+.part_1 .guide a:hover,
+.part_1 .guide a:active,
+.part_1 .guide a:visited{
+    text-decoration: none;
+    outline: none;
+}
+
+.part_1 .guide a{
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.part_1,.part_2,.part_3{
+    text-align: center;
+    overflow: hidden;
+}
+
+/* 第二部分 */
+.brief_major{
+    font-size: 28px;
+    color: #405E79;
+}
+
+.brief_paragraph{
+    padding: 30px 0;
+}
+
+.part_2 .brief_paragraph p{
+    font-size: 16px;
+    color: #73777C;
+    line-height: 24px;
+}
+
+.part_2 .brief_url{
+    padding: 30px 0;
+}
+
+.part_2 .brief_url a:link,
+.part_2 .brief_url a:hover,
+.part_2 .brief_url a:active,
+.part_2 .brief_url a:visited{
+    text-decoration: none;
+    outline: none;
+}
+
+.part_2 .brief_url a{
+    height: 38px;
+    font-size: 14px;
+    color: #fff;
+    background-color:mediumpurple;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* 第三部分 */
+.part_3{
+    background-color: #F7F7F9;
+}
+
+.part_3 .list{
+    padding-top: 15px;
+}
+
+.list ul{
+    overflow: hidden;
+}
+
+.list ul li{
+    width: 30%;
+    height: 240px;
+    float: left;
+    margin: 1%;
+    background-color: #eee;
+}
+
+/* 页脚 */
+footer{
+    width: 100%;
+    background: url('../images/bg01.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+}
+
+.copyright{
+    color: #fff;
+    font-size: 13px;
+}
