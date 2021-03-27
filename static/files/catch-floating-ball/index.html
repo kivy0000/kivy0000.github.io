@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/click.css"/>
+</head>
+<body style="text-align: center">
+    <div style="margin: 0 auto;">
+        <h4 class="title">捕捉飘浮球</h4>
+        <div class="container">
+            <div id="progressBar" class="progressBar"></div>
+            <div class="progressText">时间</div>
+            <div class="counter">已完成：<span id="finishCount">0</span></div>
+        </div>
+        <canvas id="canvas" width="640" height="480">您的浏览器不支持canvas标签！</canvas>
+    </div>
+    <div><button class="btn" onclick="Game.restart()">Restart</button></div>
+    <audio src="res/click.mp3" id="audio"></audio>
+    <script src="js/utils.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/click.js"></script>
+</body>
+</html>

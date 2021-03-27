@@ -1,0 +1,20 @@
+
+/* 清除默认边距 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #eee;
+    /*overflow: hidden;*/
+    text-align: center;
+}
+
+#canvas{
+    border: 1px solid #444;
+}
+
+.title{
+    margin: 15px 0;
+}
