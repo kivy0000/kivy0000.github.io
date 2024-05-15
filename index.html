@@ -1,56 +1,88 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>静态主页</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav {
-            float: left;
-            width: 200px;
-            background: #f2f2f2;
-            padding: 15px;
-        }
-        section {
-            margin-left: 210px; /* 导航栏宽度 */
-            padding: 15px;
-        }
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 10px;
-        }
-    </style>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IkunGoose</title>
 </head>
-<body>
-<header>
-    <h1>欢迎来到我的主页</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="#">主页</a></li>
-        <li><a href="#">关于我</a></li>
-        <li><a href="#">作品</a></li>
-        <li><a href="#">联系我</a></li>
-    </ul>
-</nav>
-<section>
-    <h2>最新作品</h2>
-    <p>这里是一些关于最新作品的描述文字...</p>
-</section>
-<footer>
-    <p>版权所有 &copy; 2023</p>
-</footer>
+<link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+<!-- 引入JQuery -->
+<script src="static/js/jquery.min.js"></script>
+<!-- 鼠标点击特效 -->
+<script src="static/js/click-fun.js"></script>
+
+
+<body onclick="click_fun(event)">
+    <nav>
+        <div class="header-fixed">
+            <div class="nav-logo fleft"><span style="line-height: 60px;">IkunGoose</span></div>
+            <div class="nav-menubar fright">
+                <ul id="nav-list">
+                    <li class="current"><a href="#">首页</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">关于</a></li>
+                    <li><a href="#">关于</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="part_1">
+        <div class="part_1_title">
+            <div class="inner">
+                <h2>IkunGoose</h2>
+            </div>
+        </div>
+        <div class="guide">
+            <a href="javascript:void(0);">
+                <span class="down">
+                    <!-- svg矢量图 -->
+                    <svg viewBox="0 0 1792 1024" width="16" height="16">
+                        <path d="M21.824 126.208L834.624 998.656a92.672 92.672 0 0 0 126.976 0L1770.304 126.208C1819.2 77.568 1780.544 0 1706.816 0H85.312C11.84 0-27.328 77.312 21.824 126.208z" fill="#ffffff" p-id="3369"></path>
+                    </svg>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div class="part_2">
+        <div class="container">
+            <div class="brief_major">
+                — IkunGoose的个人主页 —
+            </div>
+            <div class="brief_paragraph">
+            </div>
+            <div class="brief_url">
+                <a href="javascript:void(0);">About me</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="more"></div>
+            <div class="copyright">Copyright © 2024-2025 IkunGoose</div>
+        </div>
+    </footer>
+
+    <!-- 背景雪花特效 -->
+    <script src="static/js/snowflakes.min.js"></script>
+    <script src="static/js/snow_load.js"></script>
+    <!-- index.js -->
+    <script>
+        // 原生js写法
+        window.onload = function(){
+            // 设置点击nav-list的样式
+            let navUl = document.getElementById("nav-list");
+            let navLi = navUl.getElementsByTagName("li");
+            for(let index = 0; index < navLi.length; index++){
+                navLi[index].onclick = function(){
+                    for(let i = 0; i < navLi.length; i++){
+                        navLi[i].className = "";
+                    }
+                    this.className = "current";
+                };
+            }
+        }
+    </script>
 </body>
 </html>
