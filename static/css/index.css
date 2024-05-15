@@ -114,7 +114,7 @@ nav li:hover::after{
 /* 内容样式 */
 .part_1{
     width: 100%;
-    height: 722px;
+    height: 800px;
     background: url('../images/bg01.jpg');
     background-size:cover;
     background-repeat: no-repeat;
@@ -249,16 +249,7 @@ nav li:hover::after{
     background-color: #eee;
 }
 
-/* 页脚 */
-footer{
-    width: 100%;
-    background: url('../images/bg01.jpg');
-    background-size:cover;
-    background-repeat: no-repeat;
-    background-attachment:fixed;
-}
-
 .copyright{
-    color: #fff;
+    color: black;
     font-size: 13px;
 }

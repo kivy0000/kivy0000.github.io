@@ -15,14 +15,14 @@
 <body onclick="click_fun(event)">
     <nav>
         <div class="header-fixed">
-            <div class="nav-logo fleft"><span style="line-height: 60px;">IkunGoose</span></div>
+            <div class="nav-logo fleft"><span style="line-height: 60px;">IkunGoose的个人主页</span></div>
             <div class="nav-menubar fright">
                 <ul id="nav-list">
                     <li class="current"><a href="#">首页</a></li>
                     <li><a href="#">博客</a></li>
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">关于</a></li>
-                    <li><a href="#">关于</a></li>
+                    <li><a href="#">留言</a></li>
+                    <li><a href="#">特殊</a></li>
+                    <li><a href="#">提示</a></li>
                     <li><a href="#">关于</a></li>
                 </ul>
             </div>
@@ -31,58 +31,11 @@
     <div class="part_1">
         <div class="part_1_title">
             <div class="inner">
-                <h2>IkunGoose</h2>
-            </div>
-        </div>
-        <div class="guide">
-            <a href="javascript:void(0);">
-                <span class="down">
-                    <!-- svg矢量图 -->
-                    <svg viewBox="0 0 1792 1024" width="16" height="16">
-                        <path d="M21.824 126.208L834.624 998.656a92.672 92.672 0 0 0 126.976 0L1770.304 126.208C1819.2 77.568 1780.544 0 1706.816 0H85.312C11.84 0-27.328 77.312 21.824 126.208z" fill="#ffffff" p-id="3369"></path>
-                    </svg>
-                </span>
-            </a>
-        </div>
-    </div>
-    <div class="part_2">
-        <div class="container">
-            <div class="brief_major">
-                — IkunGoose的个人主页 —
-            </div>
-            <div class="brief_paragraph">
-            </div>
-            <div class="brief_url">
-                <a href="javascript:void(0);">About me</a>
+                <h2>IkunGoose的个人主页</h2>
             </div>
         </div>
     </div>
-    <footer>
-        <div class="container">
-            <div class="more"></div>
-            <div class="copyright">Copyright © 2024-2025 IkunGoose</div>
-        </div>
-    </footer>
-
-    <!-- 背景雪花特效 -->
-    <script src="static/js/snowflakes.min.js"></script>
-    <script src="static/js/snow_load.js"></script>
-    <!-- index.js -->
-    <script>
-        // 原生js写法
-        window.onload = function(){
-            // 设置点击nav-list的样式
-            let navUl = document.getElementById("nav-list");
-            let navLi = navUl.getElementsByTagName("li");
-            for(let index = 0; index < navLi.length; index++){
-                navLi[index].onclick = function(){
-                    for(let i = 0; i < navLi.length; i++){
-                        navLi[i].className = "";
-                    }
-                    this.className = "current";
-                };
-            }
-        }
-    </script>
+<script>
+</script>
 </body>
 </html>
